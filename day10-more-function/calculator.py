@@ -1,3 +1,6 @@
+from logo import logo
+
+
 def add(prev_num, user_input):
     answer = prev_num+user_input
     print(f'{prev_num}+{user_input}={answer}')
@@ -23,6 +26,7 @@ def divide(prev_num, user_input):
 
 
 def calculate():
+    print(logo)
     is_calculating = True
     total = int(input('Select a number '))
     while is_calculating:
