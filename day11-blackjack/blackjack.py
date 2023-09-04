@@ -39,6 +39,7 @@ def add(prev_num, new_num):
 
 
 set_user_drawing = True
+is_start = True
 
 
 def draw_card(computer_total=None):
@@ -47,6 +48,8 @@ def draw_card(computer_total=None):
     if (counter[new_card] > 0):
         counter[new_card] -= 1
         if (new_card == '1'):
+            if is_start:
+                return 11
             print('inside')
             user_des = None
             if set_user_drawing:
@@ -81,6 +84,7 @@ def play():
     for idx in range(0, 2):
         your_cards.append(draw_card())
         computer_cards.append(draw_card())
+        is_start = False
 
     print('your_cards', your_cards)
     print('computer_cards', computer_cards[0])
